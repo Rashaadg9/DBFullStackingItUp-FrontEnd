@@ -12,8 +12,17 @@ const GridWrapper = styled.div`
 `;
 
 
-export const Home = (props) => (
+export default function  Home()
+{
+  if( localStorage.getItem("id") > 0)
+    {
+        let url = "/userHome";
+        window.location.href = url;
+    }
+
+  return(
   <div>
     <h1>Welcome To Dollars Bank</h1>
-  </div> 
-)
+  </div>
+  )
+}

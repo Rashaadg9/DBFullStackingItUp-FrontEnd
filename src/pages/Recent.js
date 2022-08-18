@@ -22,7 +22,6 @@ export default function Recent() {
       }, []);
 
       console.log(recent);
-
   return(
       <div>
           <h1>5 Recent Transactions</h1>
@@ -31,9 +30,13 @@ export default function Recent() {
 
           <table>
               <tbody>
-                  <tr>
-                      <td></td>
+                  {recent.map((r, i) => (
+                  <tr key={i}>
+                    <td>{r.trans_date}</td>
+                    <td>{r.trans_type}</td>
+                    <td>${r.trans_amount}</td>
                   </tr>
+                  ))}
               </tbody>
           </table>
       </div>
