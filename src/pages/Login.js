@@ -7,8 +7,6 @@ export const Login = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [user, setUser] = useState([]);
-  localStorage.setItem("id", -1);
-  localStorage.setItem("name", -1);
   
   const handleSubmit = (e) => {
     e.preventDefault();
